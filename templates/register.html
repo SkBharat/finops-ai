@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - FinOps AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  <!-- ✅ Step 3: Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Step 2: Dark mode toggle -->
+  <button class="toggle-mode" onclick="document.body.classList.toggle('dark')">
+    🌓 Toggle Mode
+  </button>
+
+  <div class="auth-bg">
+    <div class="auth-card">
+      <h2>📝 Create Account</h2>
+      <p class="subtext">Just a few steps to financial clarity!</p>
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          {% for category, msg in messages %}
+            <div class="error">{{ msg }}</div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+      <form method="POST">
+        <input type="text" name="username" placeholder="Choose a username" required>
+        <input type="password" name="password" placeholder="Create a password" required>
+        <button type="submit">Register</button>
+      </form>
+
+      <p class="auth-link">
+        Already have an account?
+        <a href="{{ url_for('login') }}">Log in here →</a>
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

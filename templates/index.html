@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FinOps AI - Chat</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="chat-dark">
+
+  <div class="chat-wrapper">
+    <aside class="chat-sidebar">
+      <div>
+        <h2>💰 FinOps AI</h2>
+        <p>Welcome, <strong>{{ username }}</strong></p>
+      </div>
+      <div class="chat-actions">
+        <a href="{{ url_for('logout') }}" class="glow-btn">🚪 Logout</a>
+        
+        <form action="{{ url_for('download_csv') }}" method="get">
+          <button type="submit" class="glow-btn secondary">📥 Download CSV</button>
+        </form>
+
+        <form action="{{ url_for('clear_chat') }}" method="post">
+          <button type="submit" class="glow-btn danger">🧹 Clear Chat</button>
+        </form>
+      </div>
+    </aside>
+
+    <main class="chat-main">
+      <div class="chat-messages" id="chat-box">
+        {% if history %}
+          {% for msg in history %}
+            <div class="chat-bubble {{ 'user' if msg.role == 'user' else 'bot' }}">
+              {{ msg.content | safe }}
+            </div>
+          {% endfor %}
+        {% endif %}
+
+        {% if chart %}
+          <div class="chat-chart">
+            <img src="{{ chart }}" alt="Spending Chart">
+          </div>
+        {% endif %}
+      </div>
+
+      <form class="chat-form" method="POST">
+        <div class="input-wrap">
+          <textarea name="message" placeholder="Type your expense or ask a finance question..." required></textarea>
+          <button type="submit">➤</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+</body>
+</html>

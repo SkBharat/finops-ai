@@ -1,0 +1,243 @@
+:root {
+  --primary: #5865F2; /* Discord Blue */
+  --accent: #404eed;
+  --bg-light: #f8f9fa;
+  --text-light: #333;
+  --bg-dark: #2c2f33;
+  --text-dark: #f0f0f0;
+  --card-dark: #23272a;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Auth Background */
+.auth-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(145deg, #404eed, #2c2f33);
+}
+
+.auth-card {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.6s ease;
+}
+
+body.dark .auth-card {
+  background-color: var(--card-dark);
+  color: var(--text-dark);
+}
+
+.auth-card h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: var(--primary);
+}
+
+.auth-card input,
+.auth-card button {
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.3s;
+  border: 1px solid #ccc;
+}
+
+.auth-card input {
+  background-color: #fff;
+  color: #333;
+}
+
+body.dark .auth-card input {
+  background-color: #3b3e45;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+.auth-card button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-card button:hover {
+  background-color: var(--accent);
+}
+
+.auth-card .auth-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.auth-card .auth-link a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* Toggle Mode Button */
+.toggle-mode {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+.toggle-mode:hover {
+  text-shadow: 0 0 5px var(--primary);
+}
+/* 3D Dark Theme Inspired by Discord */
+
+.chat-dark {
+  background: #2c2f33;
+  color: #eee;
+}
+
+.chat-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.chat-sidebar {
+  width: 250px;
+  background: #23272a;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 3px 0 10px rgba(0,0,0,0.5);
+  color: #fff;
+}
+
+.chat-sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.chat-sidebar p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.glow-btn {
+  display: block;
+  background: #7289da;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 8px #7289da;
+  transition: all 0.2s ease-in-out;
+}
+
+.glow-btn.secondary {
+  background: #99aab5;
+  box-shadow: 0 0 8px #99aab5;
+}
+
+.glow-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #99aab5;
+}
+
+.chat-main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.chat-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chat-bubble {
+  padding: 14px 20px;
+  border-radius: 10px;
+  max-width: 70%;
+  line-height: 1.4;
+  font-size: 16px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+}
+
+.chat-bubble.user {
+  align-self: flex-start;
+  background: #3c3f45;
+  border-left: 4px solid #7289da;
+}
+
+.chat-bubble.bot {
+  align-self: flex-end;
+  background: #4e5d94;
+  border-right: 4px solid #99aab5;
+}
+
+.chat-form {
+  margin-top: 20px;
+}
+
+.input-wrap {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.input-wrap textarea {
+  flex: 1;
+  border: none;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 16px;
+  resize: none;
+  background: #40444b;
+  color: white;
+}
+
+.input-wrap button {
+  padding: 14px 20px;
+  background: #7289da;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #7289da;
+  transition: all 0.3s ease;
+}
+
+.input-wrap button:hover {
+  background: #5b6eae;
+  transform: scale(1.05);
+}

@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+chat_history/
+*.sqlite3
+.DS_Store
+.env

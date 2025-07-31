@@ -1,0 +1,7 @@
+transformers
+torch
+sentencepiece
+gradio
+scikit-learn>=1.0
+matplotlib>=3.0
+spacy>=3.0

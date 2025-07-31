@@ -51,7 +51,7 @@ An intelligent personal finance assistant built with **Python**, **Flask**, and 
 
 3. **Visit in browser**  
    ```
-   http://localhost:5000
+   http://localhost:
    ```
 
 ---

@@ -1,32 +1,32 @@
-# 💰 FinOps AI — Your Personal Finance Assistant
+#  FinOps AI — Your Personal Finance Assistant
 
 An intelligent personal finance assistant built with **Python**, **Flask**, and **TinyLLaMA** that helps you track expenses, forecast budgets, and get AI-powered financial insights through chat.
 
 ---
 
-## 🔧 Features
+##  Features
 
-- 🧾 **Natural Language Expense Logging**  
+-  **Natural Language Expense Logging**  
   → Example: _“I spent ₹250 on dinner with friends”_
 
-- 📊 **Spending Charts**  
+-  **Spending Charts**  
   → Category-wise visuals of your expenses.
 
-- 🔮 **Budget Forecasting**  
+-  **Budget Forecasting**  
   → Predicts monthly spend trends using your logs.
 
-- 🧠 **AI Tips & Smart Suggestions**  
+-  **AI Tips & Smart Suggestions**  
   → Personalized budgeting tips based on categories.
 
-- 💬 **LLM-Powered Chat & Summary**  
+-  **LLM-Powered Chat & Summary**  
   → Chat with FinOps AI and ask for summaries like _“Summarize my spending and savings”_.
 
-- 📥 **Downloadable CSV Logs**  
+-  **Downloadable CSV Logs**  
   → Export your entire expense history.
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 | Layer     | Tech                                |
 |-----------|-------------------------------------|
@@ -37,7 +37,7 @@ An intelligent personal finance assistant built with **Python**, **Flask**, and 
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 1. **Install dependencies**  
    ```
